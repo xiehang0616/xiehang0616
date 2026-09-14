@@ -31,7 +31,7 @@ for theme, (bg, border, ink, muted, green, purple) in THEMES.items():
 <text class="label" x="958" y="51" fill="{muted}" font-size="12" text-anchor="end">@xiehang0616</text>
 <circle cx="830" cy="73" r="3" fill="{green}"/>
 <text class="label" x="958" y="77" fill="{muted}" font-size="10" text-anchor="end" letter-spacing="1.4">ALWAYS EXPLORING</text>
-<text class="copy" x="39" y="111" fill="{muted}" font-size="16">把 AI 想法，做成可以体验的作品。</text>
+<text class="copy" x="39" y="111" fill="{muted}" font-size="16">从业务问题出发，让 AI 走进真实工作流。</text>
 <path d="M39 134H961" stroke="{border}"/>
 {snake}
 <text class="label" x="39" y="356" fill="{muted}" font-size="10" letter-spacing="1.5">A LITTLE PROGRESS, EVERY DAY.</text>
