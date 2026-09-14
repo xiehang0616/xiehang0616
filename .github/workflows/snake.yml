@@ -1,0 +1,51 @@
+name: Update contribution snake
+
+on:
+  schedule:
+    - cron: '17 1 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+    paths:
+      - '.github/workflows/snake.yml'
+      - 'scripts/build-header.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contribution-snake-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate real contribution animations
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: xiehang0616
+          outputs: |
+            assets/snake-dark.svg?palette=github-dark&color_snake=%23bf77e8
+            assets/snake-light.svg?palette=github-light&color_snake=%238954c7
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build personal headers
+        run: python3 scripts/build-header.py
+
+      - name: Save updated images
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/snake-dark.svg assets/snake-light.svg assets/milu-header-dark.svg assets/milu-header-light.svg
+          if git diff --cached --quiet; then
+            echo 'Contribution images are unchanged.'
+          else
+            git commit -m 'Update contribution snake [skip ci]'
+            git pull --rebase
+            git push
+          fi
