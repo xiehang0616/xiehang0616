@@ -35,7 +35,7 @@
 | **麋鹿 AI 产品拆解** | 基于截图与文档拆解 AI / Agent 产品，标记证据缺口，生成可追溯的报告。 | [项目 ↗](https://github.com/xiehang0616/elk-ai-product-teardown) |
 | **麋鹿 AI 测试集** | 从产品需求出发，整理评测目标、测试样本与评分标准，输出 CSV / Excel。 | [项目 ↗](https://github.com/xiehang0616/elk-ai-test-set) |
 | **产品战略思考助手** | 挑战产品假设、发现信息缺口，梳理方向、定位与验证思路。 | [项目 ↗](https://github.com/xiehang0616/deepen-product-thinking1) |
-| **AI 产品架构研究** | 围绕 WorkBuddy、Marvis 与 Yomoa AI，整理基于证据的产品架构分析。 | [报告仓库 ↗](https://github.com/xiehang0616/ai-product-architecture-showcase) |
+| **[pi-product-development-agent](https://github.com/xiehang0616/pi-product-development-agent)** | 在 VS Code / Pi Agent 中梳理并完善 PRD，协同推进产品设计、开发、测试与评测，记录项目进度。 | [项目 ↗](https://github.com/xiehang0616/pi-product-development-agent) |
 
 ---
 
